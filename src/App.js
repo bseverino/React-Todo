@@ -56,14 +56,27 @@ class App extends React.Component {
     });
   };
 
-  render() {
-    console.log(todo);
+  toggleCompleted = completeTask => {
+    const currentTask = todo.indexOf(todo.find(item => item.id === completeTask.id));
+    const updatedTodo = todo;
 
+    if (completeTask.completed === false) {
+      updatedTodo.splice(currentTask, 1, {task: completeTask.task, id: completeTask.id, completed: true})
+    } else {
+      updatedTodo.splice(currentTask, 1, {task: completeTask.task, id: completeTask.id, completed: false})
+    };
+
+    this.setState({todo: updatedTodo});
+  };
+
+  clearCompleted = () => {};
+
+  render() {
     return (
       <div>
         <h2>To-Do List</h2>
-        <TodoList todo={this.state.todo} />
-        <TodoForm inputField={this.state.inputField} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
+        <TodoList todo={this.state.todo} toggleCompleted={this.toggleCompleted} />
+        <TodoForm inputField={this.state.inputField} handleChange={this.handleChange} handleSubmit={this.handleSubmit} clearCompleted={this.clearCompleted} />
       </div>
     );
   }
