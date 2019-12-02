@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Itim&display=swap');
 
 * {
     font-family: 'Indie Flower', cursive;
@@ -6,7 +6,7 @@
 
 h2 {
     font-size: 3rem;
-    margin: 0 0 25px;
+    margin: 0;
 }
 
 p {
@@ -16,7 +16,6 @@ p {
 }
 
 input {
-    width: 100%;
     padding: 10px;
     background: white;
     font-size: 2rem;
@@ -28,12 +27,17 @@ button {
     padding: 5px 10px;
     background: white;
     font-size: 1.5rem;
+    font-family: 'Itim', cursive;
 }
 
 button:hover {
     cursor: pointer;
     background: #D4AC0D;
     color: white;
+}
+
+.hidden {
+    display: none;
 }
 
 .todo-container {
@@ -43,6 +47,12 @@ button:hover {
     padding: 25px 50px 50px;
     display: flex;
     flex-direction: column;
+}
+
+.search-form {
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 25px;
 }
 
 .todo-list {
@@ -65,6 +75,10 @@ button:hover {
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 20px;
+}
+
+.todo-input {
+    width: 100%;    
 }
 
 .completed {
