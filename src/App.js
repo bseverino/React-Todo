@@ -1,5 +1,6 @@
 import React from 'react';
 
+import './components/TodoComponents/Todo.css';
 import TodoList from './components/TodoComponents/TodoList';
 import TodoForm from './components/TodoComponents/TodoForm';
 
@@ -55,8 +56,9 @@ class App extends React.Component {
     });
   };
 
-
   render() {
+    console.log(todo);
+
     return (
       <div>
         <h2>To-Do List</h2>
