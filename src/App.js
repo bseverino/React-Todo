@@ -56,8 +56,8 @@ class App extends React.Component {
   };
 
   toggleCompleted = completeTask => {
-    const currentTask = todo.indexOf(todo.find(item => item.id === completeTask.id));
-    const updatedTodo = todo;
+    const currentTask = this.state.todo.indexOf(this.state.todo.find(item => item.id === completeTask.id));
+    const updatedTodo = this.state.todo;
 
     if (completeTask.completed === false) {
       updatedTodo.splice(currentTask, 1, {task: completeTask.task, id: completeTask.id, completed: true})
@@ -76,8 +76,8 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <h2>To-Do List</h2>
+      <div className='todo-container'>
+        <h2>To-Do List:</h2>
         <TodoList todo={this.state.todo} toggleCompleted={this.toggleCompleted} />
         <TodoForm inputField={this.state.inputField} handleChange={this.handleChange} handleSubmit={this.handleSubmit} clearCompleted={this.clearCompleted} />
       </div>
