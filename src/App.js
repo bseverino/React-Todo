@@ -25,7 +25,7 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      todo: todo,
+      todo: window.localStorage.getItem('todo') ? JSON.parse(window.localStorage.getItem('todo')) : [],
       inputField: ''
     };
   };
@@ -75,6 +75,8 @@ class App extends React.Component {
   };
 
   render() {
+    window.localStorage.setItem('todo', JSON.stringify(this.state.todo));
+
     return (
       <div className='todo-container'>
         <h2>To-Do List:</h2>
