@@ -36,7 +36,6 @@ class App extends React.Component {
       id: Date.now(),
       completed: false
     };
-
     this.setState({
       todo: [...this.state.todo, newTask]
     });
@@ -69,7 +68,11 @@ class App extends React.Component {
     this.setState({todo: updatedTodo});
   };
 
-  clearCompleted = () => {};
+  clearCompleted = e => {
+    e.preventDefault();
+    const filteredTodo = this.state.todo.filter(task => !task.completed)
+    this.setState({todo: filteredTodo});
+  };
 
   render() {
     return (
