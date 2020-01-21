@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Itim&display=swap');
+
+* {
+    font-family: 'Indie Flower', cursive;
+}
+
+h2 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+p {
+    font-size: 2rem;
+    margin: 5px 0;
+    padding: 0 5px;
+}
+
+input {
+    padding: 10px;
+    background: white;
+    font-size: 2rem;
+}
+
+button {
+    border: none;
+    margin: 10px;
+    padding: 5px 10px;
+    background: white;
+    font-size: 1.5rem;
+    font-family: 'Itim', cursive;
+}
+
+button:hover {
+    cursor: pointer;
+    background: #D4AC0D;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+.todo-container {
+    background: #F7DC6F;
+    width: 450px;
+    margin: 50px auto;
+    padding: 25px 50px 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-form {
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 25px;
+}
+
+.todo-list {
+    border-top: 1px solid #D4AC0D;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.todo-item {
+    border-bottom: 1px solid #D4AC0D;
+    width: 100%;
+}
+
+.todo-item:hover {
+    cursor: pointer;
+}
+
+.todo-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.todo-input {
+    width: 100%;    
+}
+
+.completed {
+    text-decoration: line-through;
+}
